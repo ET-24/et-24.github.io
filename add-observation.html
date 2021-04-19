@@ -49,20 +49,20 @@
       <h2>Observation Details</h2>
       <p><span class="required">*</span> Required field</p>
       <form id="new-observation" action="https://formspree.io/f/xwkapnkr" method="POST">
-        <fieldset id="observation-group" class="input-group">
+         <fieldset id="observation-group" class="input-group">
           <legend>Observation</legend>
 
           <!-- Species Guess: required text field, must be 200 or fewer characters in length -->
           <label id="species-guess-label" for="species-guess">Species Guess<span class="required">*</span></label>
-          <input id="species-guess" type="text" maxlength="200" placeholder="Great Horned Owl" required>
+          <input id="species-guess" name="species-guess" type="text" maxlength="200" placeholder="Great Horned Owl" required>
 
           <!-- Description: required text field -->
           <label id="description-label" for="descripton">Description<span class="required">*</span></label>
-          <input id="description" type="text" placeholder="Roosting on fence post at the edge of a field" size="55" required>
+          <input id="description" name="description" type="text" placeholder="Roosting on fence post at the edge of a field" size="55" required>
 
           <!-- Date Observed: required date field -->
           <label id="date-label" for="date">Date Observed<span class="required">*</span></label>
-          <input id="date" type="date" required>
+          <input id="date" name="date" type="date" required>
 
           <!-- Notes: optional free-form text field. Show 3 lines of text. -->
           <label id="notes-label" for="notes">Notes</label>
@@ -74,14 +74,14 @@
 
           <!-- Latitude: required text field, must be a valid number between -90 and 90 -->
           <label id="latitude-label" for="latitude">Latitude<span class="required">*</span></label>
-          <input id="latitude" type="text" min="-90" max="90" placeholder="43.7955" required>
+          <input id="latitude" name="latitude" type="text" min="-90" max="90" placeholder="43.7955" required>
 
           <!-- Longitude: required text field, must be a valid number between -180 and 180 -->
           <label id="longitude-label" for="longitude">Longitude<span class="required">*</span></label>
-          <input id="longitude" type="text" min="-180" max="180" placeholder="-79.3496" required>
+          <input id="longitude" name="longitude" type="text" min="-180" max="180" placeholder="-79.3496" required>
 
           <!-- Share Location: checkbox field -->
-          <input id="share-location" type="checkbox">
+          <input id="share-location" name="share-location" type="checkbox">
           <label id="share-location-label" for="share-location">Share location information (i.e., it's ok to make this
             public)</label>
         </fieldset>
@@ -91,15 +91,15 @@
 
           <!-- Photographer Name: optional text field, must be 100 or fewer characters in length -->
           <label id="photographer-name-label" for="photographer-name">Photographer Name</label>
-          <input id="photographer-name" type="text" maxlength="100" placeholder="Karen Shu" size="55">
+          <input id="photographer-name" name="photographer-name" type="text" maxlength="100" placeholder="Karen Shu" size="55">
 
           <!-- Photographer Email: optional email field -->
           <label id="photographer-email-label" for="photographer-email">Photographer Email</label>
-          <input id="photographer-email" type="email" placeholder="kshu@photos.com" size="55">
+          <input id="photographer-email" name="photographer-email" type="email" placeholder="kshu@photos.com" size="55">
 
           <!-- Photo: optional file upload field -->
           <label id="photo-label" for="photo">Photo</label>
-          <input id="photo" type="file">
+          <input id="photo" name="photo" type="file">
 
           <!-- License: drop-down menu of options for Creative Commons Licenses (https://creativecommons.org/choose/). -->
           <label id="license-label" for="license">License (<a href="https://creativecommons.org/choose/">help on
