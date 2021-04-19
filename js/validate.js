@@ -18,17 +18,21 @@ function validate(event) {
     parseFloat(form.longitude.value) >= -180;
   const lngLabel = document.querySelector("#longitude-label span");
 
+  while (latLabel.hasChildNodes()) latLabel.removeChild(latLabel.firstChild);
   if (!latValid) {
-    while (latLabel.hasChildNodes()) latLabel.removeChild(latLabel.firstChild);
     latLabel.appendChild(
       document.createTextNode("* must be a valid Latitude (-90 to 90)")
     );
+  } else {
+    latLabel.appendChild(document.createTextNode("*"));
   }
+  while (lngLabel.hasChildNodes()) lngLabel.removeChild(lngLabel.firstChild);
   if (!lngValid) {
-    while (lngLabel.hasChildNodes()) lngLabel.removeChild(lngLabel.firstChild);
     lngLabel.appendChild(
       document.createTextNode("* must be a valid Longitude (-180 to 180)")
     );
+  } else {
+    lngLabel.appendChild(document.createTextNode("*"));
   }
 
   if (latValid && lngValid) return true;
